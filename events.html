@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Sports Connects/Events</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel="stylesheet" href="css/main.css">
+  <!-- favicon -->
+  <link rel="icon" type="image/x-icon" href="./images/Sports Connects.png">
+  <!-- font and icons -->
+  <script src="https://kit.fontawesome.com/9cc9298b09.js" crossorigin="anonymous"></script>
+
+  <!-- jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+
+  <style>
+    .event-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0px 50px;
+      row-gap:20px;
+    }
+
+    .event-banner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #90b2ed40;
+      width: 100%;
+    }
+
+    .event-bg-card {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 50px 0px;
+      width: 100%;
+    }
+    .img-carousel{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .carousel-control-next-icon{
+      background-color: blue;
+    }
+    .carousel-control-prev-icon{
+      background-color: blue;
+    }
+
+    .event-card {
+      display: flex;
+      flex-direction: row;
+
+    }
+    .contact-info-item {
+      display: flex;
+      
+    }
+    .contact-info-icon {
+      display: flex;
+    height: 40px;
+    width: 40px;
+    background-color: #040404;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    border-radius: 50%;
+    }
+
+    .contact-info-icon i {
+      font-size: 20px;
+      line-height: 70px;
+    }
+
+    .event-list {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+     
+    }
+
+    .event-img {
+      width: 80%;
+      height: 100%;
+    }
+    .img-card{
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    /* news */
+    .news{
+      margin: 0px 50px;
+    }
+    .news-article{
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px;
+    }
+    .news-card{
+      display: flex;
+      column-gap: 10px;
+    }
+    .news-headlines{
+      font-size: 24px;
+      font-weight: bold;
+    }
+    
+    .hidden {
+  display: none;
+}
+
+    /* media queries */
+    @media screen and (max-width: 400px) {
+    .event-section {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 0px 50px;
+          row-gap:20px;
+        }
+    
+        .event-banner {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: #90b2ed40;
+          width: 100%;
+        }
+    
+        .event-bg-card {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 50px 0px;
+          width: 100%;
+        }
+        .img-carousel{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+    
+        .event-card {
+          display: flex;
+          flex-direction: column;
+    
+        }
+        .contact-info-item {
+          display: flex;
+          
+        }
+        .contact-info-icon {
+          display: flex;
+        height: 40px;
+        width: 40px;
+        background-color: #040404;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        border-radius: 50%;
+        }
+    
+        .contact-info-icon i {
+          font-size: 20px;
+          line-height: 70px;
+        }
+    
+        .event-list {
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+         
+        }
+    
+        .event-img {
+          width: 80%;
+          height: 100%;
+        }
+        .img-card{
+          display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+}
+
+@media screen and (min-width: 401px) and (max-width: 720px) {
+    .event-section {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 0px 50px;
+          row-gap:20px;
+        }
+    
+        .event-banner {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: #90b2ed40;
+          width: 100%;
+        }
+    
+        .event-bg-card {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 50px 0px;
+          width: 100%;
+        }
+        .img-carousel{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+    
+        .event-card {
+          display: flex;
+          flex-direction: column;
+    
+        }
+        .contact-info-item {
+          display: flex;
+          
+        }
+        .contact-info-icon {
+          display: flex;
+        height: 40px;
+        width: 40px;
+        background-color: #040404;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        border-radius: 50%;
+        }
+    
+        .contact-info-icon i {
+          font-size: 20px;
+          line-height: 70px;
+        }
+    
+        .event-list {
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+         
+        }
+    
+        .event-img {
+          width: 80%;
+          height: 100%;
+        }
+        .img-card{
+          display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+}
+
+@media screen and (min-width: 721px) and (max-width: 1280px) {
+    .event-section {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 0px 50px;
+          row-gap:20px;
+        }
+    
+        .event-banner {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: #90b2ed40;
+          width: 100%;
+        }
+    
+        .event-bg-card {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 50px 0px;
+          width: 100%;
+        }
+        .img-carousel{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+    
+        .event-card {
+          display: flex;
+          flex-direction: row;
+    
+        }
+        .contact-info-item {
+          display: flex;
+          
+        }
+        .contact-info-icon {
+          display: flex;
+        height: 40px;
+        width: 40px;
+        background-color: #040404;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        border-radius: 50%;
+        }
+    
+        .contact-info-icon i {
+          font-size: 20px;
+          line-height: 70px;
+        }
+    
+        .event-list {
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+         
+        }
+    
+        .event-img {
+          width: 80%;
+          height: 100%;
+        }
+        .img-card{
+          display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+    .event-section {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 0px 50px;
+          row-gap:20px;
+        }
+    
+        .event-banner {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: #90b2ed40;
+          width: 100%;
+        }
+    
+        .event-bg-card {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 50px 0px;
+          width: 100%;
+        }
+        .img-carousel{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+    
+        .event-card {
+          display: flex;
+          flex-direction: row;
+    
+        }
+        .contact-info-item {
+          display: flex;
+          
+        }
+        .contact-info-icon {
+          display: flex;
+        height: 40px;
+        width: 40px;
+        background-color: #040404;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        border-radius: 50%;
+        }
+    
+        .contact-info-icon i {
+          font-size: 20px;
+          line-height: 70px;
+        }
+    
+        .event-list {
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+         
+        }
+    
+        .event-img {
+          width: 80%;
+          height: 100%;
+        }
+        .img-card{
+          display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+    .event-section {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 0px 50px;
+          row-gap:20px;
+        }
+    
+        .event-banner {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: #90b2ed40;
+          width: 100%;
+        }
+    
+        .event-bg-card {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 50px 0px;
+          width: 100%;
+        }
+        .img-carousel{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+    
+        .event-card {
+          display: flex;
+          flex-direction: row;
+    
+        }
+        .contact-info-item {
+          display: flex;
+          
+        }
+        .contact-info-icon {
+          display: flex;
+        height: 40px;
+        width: 40px;
+        background-color: #040404;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        border-radius: 50%;
+        }
+    
+        .contact-info-icon i {
+          font-size: 20px;
+          line-height: 70px;
+        }
+    
+        .event-list {
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+         
+        }
+    
+        .event-img {
+          width: 80%;
+          height: 100%;
+        }
+        .img-card{
+          display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+}
+
+@media screen and (min-width: 1921px) {
+    .event-section {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 0px 50px;
+          row-gap:20px;
+        }
+    
+        .event-banner {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: #90b2ed40;
+          width: 100%;
+        }
+    
+        .event-bg-card {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 50px 0px;
+          width: 100%;
+        }
+        .img-carousel{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+    
+        .event-card {
+          display: flex;
+          flex-direction: row;
+    
+        }
+        .contact-info-item {
+          display: flex;
+          
+        }
+        .contact-info-icon {
+          display: flex;
+        height: 40px;
+        width: 40px;
+        background-color: #040404;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        border-radius: 50%;
+        }
+    
+        .contact-info-icon i {
+          font-size: 20px;
+          line-height: 70px;
+        }
+    
+        .event-list {
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+         
+        }
+    
+        .event-img {
+          width: 80%;
+          height: 100%;
+        }
+        .img-card{
+          display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+}
+/* news media queries */
+@media screen and (max-width: 400px) {
+    .news{
+          margin: 0px 50px;
+        }
+        .news-article{
+          display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0px;
+        }
+        .news-card{
+          display: flex;
+          column-gap: 10px;
+          flex-direction: column;
+        }
+        .news-headlines{
+          font-size: 24px;
+          font-weight: bold;
+        }
+        
+}
+
+@media screen and (min-width: 401px) and (max-width: 720px) {
+    .news{
+          margin: 0px 50px;
+        }
+        .news-article{
+          display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0px;
+        }
+        .news-card{
+          display: flex;
+          column-gap: 10px;
+          flex-direction: column;
+        }
+        .news-headlines{
+          font-size: 24px;
+          font-weight: bold;
+        }
+        
+}
+
+@media screen and (min-width: 721px) and (max-width: 1280px) {
+    .news{
+          margin: 0px 50px;
+        }
+        .news-article{
+          display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0px;
+        }
+        .news-card{
+          display: flex;
+          column-gap: 10px;
+        }
+        .news-headlines{
+          font-size: 24px;
+          font-weight: bold;
+        }
+        
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+    .news{
+          margin: 0px 50px;
+        }
+        .news-article{
+          display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0px;
+        }
+        .news-card{
+          display: flex;
+          column-gap: 10px;
+        }
+        .news-headlines{
+          font-size: 24px;
+          font-weight: bold;
+        }
+        
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+    .news{
+          margin: 0px 50px;
+        }
+        .news-article{
+          display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0px;
+        }
+        .news-card{
+          display: flex;
+          column-gap: 10px;
+        }
+        .news-headlines{
+          font-size: 24px;
+          font-weight: bold;
+        }
+        
+}
+
+@media screen and (min-width: 1921px) {
+    .news{
+          margin: 0px 50px;
+        }
+        .news-article{
+          display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0px;
+        }
+        .news-card{
+          display: flex;
+          column-gap: 10px;
+        }
+        .news-headlines{
+          font-size: 24px;
+          font-weight: bold;
+        }
+        
+}
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: transparent;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="./images/Sports Connects.png" width="100" height="60"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="team.html">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="facilities.html">Facilities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <section class="event-section">
+    <h1>Events</h1>
+    <hr style="color: black;">
+    <div class="event-banner">
+      <div class="event-bg-card">
+        <div class="event-card col-lg-12">
+          <div class="col-lg-5">
+            <ul class="event-list">
+              <h2> Sports Connects League</h2>
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fa-solid fa-calendar-days fa-lg" style="color: #FF8000;"></i>
+                </div>
+    
+                <div class="contact-info-content">
+                  <h4>Duration</h4>
+                  <p>25/05/2024 To 02/06/2024</p>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fa-solid fa-calendar-days fa-lg" style="color: #FF8000;"></i>
+                </div>
+    
+                <div class="contact-info-content">
+                  <h4>Format</h4>
+                  <p>T20</p>
+                </div>
+              </div>
+            
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                <img class="ball-icon" style="height: 40px; width: 40px;"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwE
+                AmpwYAAAKDklEQVR4nO1da6xdRRX+KpY3vhLDw6hoJEEjUUQUsJL4IBIF34KAooIvJLVVxGg01GcINVe94XbPbDimSaPBXCwUpP
+                iKj0SpNqYFS5QIbVUoAtJS+KEttHSZNbP2vnP23Wef/bpnz7l3vuQm96x9ztprzzozs16zDhAQEBAQEBAQEBAQEBAQEBAQEBAQEB
+                AwMtA0DqIIp5DCpaRxDWmsI4UtpLGNNB4jhSfNH//PNL6mcLN5b4RLzGencVBQWRMlKLyAYnyWNG4hhcdJgxr9Kew2itRYStfiuK
+                CcMkpYjUNJ4SJS+AUp7M8M6jZncC+iCG+kVXg5XY/npfQIz6UYJ5prMS7M/az9/H5S+JnhM4lDgnKyipjCkRTjClL4d843+xO0Ci
+                +kHo5KaT0c1fd5offRMu83PJjXbP4PksbnaQ2OWPCKoRV4Jil8jjR2OoP0F9JYnh38pgqZReP72n0oef0oKSxjmRakYijGEhn8RBF
+                /oAhvLjWYbSgkoWm8hRTucOS4i2KcgYUCmsbBpDBJCgdkAO4lhbf3vWcFniHW0lb+fxCtUCGDeChsz+UR4RzSuE9mC8v2XZYV8xkU
+                4aWk8Gd5aDZVrxq0qRIrLjMgebRBCqnKwzEqvkYKTwnPjaRwPOYjKMabxPS0s0Ljta3x1vkKqc1P4XVmFlm+7NucifkE0ngvaeyV
+                B1w3aw8gLPJJIYbnJJ5FGj+V2byHYrwb8wGk8bHUp1BY6a7dvFyZtVrh1lmfU7idFG4bRitcsirwGBghYPlmfJePYuxnRqKMGF/q
+                u6ZwAilsIo2fsEMH95prDU3hyEE0QycsSunOTKvCo8RzfDVVyrjOFNkz9sgAXJm5toQUHiaFT+V+tlfe7C2lkBKm89DnUfhyunyN
+                254i1pTdwBUm+q4pvIs0HmH7f+Dne/4pRGSfTDf6cbG+xM9ITNu1fXuGvbaFYrymkEfPU4VY3+YWebY/UYzF8B3Ot+g+tlQahFR2
+                mZCKhDLyaIUKqcCjkmyr8ZzUJM7Mfu8ge8MB41hFOLkhr2NpCscMpQ1QSBUelWWzuRl2Hp+mCKfBR5hv30xs6uspfQKHzeUmSAUK
+                mUuQxrfkvpu9TH5J1JYF/KsbmpC4VTzvFDKJQ0jh73LvpfAun5GE0GO8I6VrnEkKD2T9jFI8FSLSWDWUVrRkleRRF2Ix8l7yH4px
+                OHyBSS7ZQfltn5drLarKjhStwRHpIEviKI9WuKlX4NHo2RV+LzyXwwdIhDTJ9KW+BWl8khR+U4tnz0+zN1fWCG8Tnju8SAebvLRs
+                biktxmJS+BfFOHXeK4SwKM08KlzQBs9mAnFBAgsT4RKHdjEp/Ko2z974KCRdDaxCbm+LZ/1SHRs8/B/FeLZDZ0/97Np8p3Gw4anw
+                38Riy6MVKqQCj6YQZ5FjXPua+jjNBOGiAPvNmHZorzCWVSZFWpn3dXg1KbxqKK3IyirJow2YqLWV4/K2eVcRIonrXJxxmK4ZmQzU
+                jR+Sm/exctzUjQDWrN1tQiUxjnUE20wKbxiZHCtMwK97hXBIxoaNdnfiuXNOXAbibyntehxtgnct1DaRwhfYvxlKcxWSrSQpyaMt
+                SK0ADYtmzwlMEbMdiB86tHe2YWlQjMNlKTzAsbBBtCKFVOHRFkjjBuE/+lSvVKGT+22TEppvNubdq2D2DlLICM3e9J4aV4pCrm6b
+                d5mbr5ObvyelKUyTwnkLViER3tfZxp6G2p310mTRWsgP0LgqJNlXFe5sm3eZm/9DFOJaWDvYWWwptL3fOFoSH8qjFSqkAo9WHWWr
+                kO1t8x5+8yTc7qRpzcGammnbLDiMP6vmN49WZGWV5NEWOFohCnl0LvgX39weISM30W/SmiNO/FOBQkZy/xgXOv8vFln2dqcQt+CAaS
+                OuGKcOHUOJaj/ph0Lyl6xdfMSsFf4xPkAK7x9KK16ySvFoFFTUeCzzuqMlK29T5xzIFF7cStJL42mzAa/GoYNohZt6BR615eRjchr3+
+                7KpW7M3wikObSNpnL5QzF6KcQZp/NF5fWqXZq91DJ2cOYdRKMKHO1MIjTZBJSd9b5jlGCqsbcq7ndCJxoqFFDohm2qYqUFT+GJ3oZMku
+                KjwI0fAczml25j3BA6TUPZMYDCHVqiQCjxqy6nxy76yJ4Ufdxdc5HJKe/N7MlbGE234IqTwGYpx2VBacfi9FI9a8tk64d30Azw/pSWHR
+                huW0TZPUDl5ZHMIZ4THiqm7UlIuAtyUY2Ht6sJBzW7sH3EEu4o0vr8AFPIdTjfkLOGj39AdoZbKYNyY0qbwMtJ4qGnWkDROz0aOc2lFR
+                Q4ledRcrrhE9pUpjc/C2C9n4+WwvmDX4jg5DLknUwZ0R90iOadcZ6/h21/C00crUQZUikdViPGyIX3NTW/sKeN9nMZGlyCNn8s34+N9x
+                dcNlg/yvFCOiwAzlTafFr7r4U0pKZdTtrSGk8eOoVnyNP7ZN0tnzsWcD0+KrR+UWfLWVnj2/J0hpPFrbvPkvD7bq2Jrhuk3ZWfJ71rht
+                8bP4wg8A0y3IDflwF2M7LMvgy8wD8r9puzDntsKT4WV2QrIXFrxgZ1SPErJwxs3W1aOj8UFHnLvR7w6sJOp871nlFOXRuSHSEXNZPrah
+                vLv7byed8ihz7tEKd+YTwohjQ+ZZ3PzMArflmfd5OWhzzQ/kByLblhOSQrHZ5NdubTiJasUj6GyxDiJYrwo91h0jNfDZzjdc7a6zmIlH
+                rHJTT9hqlgkUJlHK9zUK/CosZdsl2dcCd8h3vBGEfjmOoE28sDszbsu7ZqSHlobxqK1Rros2E5sLPj3xk0hZBtjPkzX4SWZ55qSz+90l
+                7CxgISn9+T1yvJZIWTDIA9lu0+kPbPs8b0lGEdwvt3pJveVio0IqK/5WA6tUCEVeJhr3CHbmrZbOGLdd41T0/YZ9vORC4wzOJ3pKGWir
+                IlIGje6ZxcH0YRuBrkuD8l03m/kc+uGbRIu6W60z837jDVkptjlS+HWtup/hymkLKSf7wk5TTDXp8vUuM+M3D1lZqPf2qb9Tg0VMotfh
+                NOcBv47x3bPGAZ2yMwZEquUp9ijH1T9QbzeZ9f5HFrhksUxtkwQMY+WaSXFpT37HNN2vKypmgXKE8bLTWZLJiBJ1t7fYdZ12XPyaEUKk
+                fX/gVk8MrS+85Ezs4LLTVeOjZ/R4rKwObV6FDaQwlkjb8avcBaXgzpybPI+HDJXkG/9UtNvSsuAaNyd5lfmUiG24drdzn25U+rl3gYKR
+                wk5rrxclqRkgEbzgy72GN4y7/IZPoDsGcALpB344J884iJn+7NGJ9b6ySO7aa+nCB/0Ju3qO2gKx5glROMmae1Kjf6YB9dOxbis81Kdc
+                Qex4xbhZGnsf7Uo6U75wZZd6c/mWcVtk34ra817OVLAHYC6Ku8MCAgICAgICAgICAgICAgICAgICAjAwsL/AdLC/x970cjqAAAAAElFT
+                kSuQmCC">  
+                </div>
+    
+                <div class="contact-info-content">
+                  <h4>Ball Type</h4>
+                  <p>Leather</p>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fa-solid fa-people-group fa-2xs" style="color: #FF8000;"></i>
+                </div>
+    
+                <div class="contact-info-content">
+                  <h4>Teams</h4>
+                  <p>6</p>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <img  style="height: 40px; width: 40px;"src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABmElEQVR4nO2UTUvVURDGf1qIFFSghi7UUnGt2z6CuMjvoAa2sI1uCmbs70vpwi9QC10oSFCtAl9oKeZeLHKT4EIiqE1E0SOexuu9l3tveHF5Z3POzDNznpk5cw7UpCaXJnpKv5zXMhqrPsNolvFCszSVAjdlHMloKLJfk7MqZ1fGsKCuAsEdGX/kzBUDPXIkZyL0QRnfZNySMRbYTlqNdWV05sX2ytiT0RX6moxjGVfzCR6l4Iz2pDvvZXyWUS/DEwZ1MkblfJfxI+3/2W7L+SVjPsVOMRSJ3MsnWJbxJe2fcTMyfhxYIsj5ZnSmKs6qOfU33sj4FP6tEf/wnMB5J2c7HPoi+H4pgmQ7r+annEUZ06mKNa4kzPktJ6tMMMXQhQlOW1qGYEnOYRx4Q8ZfGU/+2yJnIw2C81bOx4RP01aqRePRlo7Qt+QcVLxk50HBJTvPy19yRncYJyPrARlfi8Z0N5d14Zh2ydhXxt2yYxpZb8RDKwC0wHUZKzI+yBmp6qHlvgrjVfFLvohohhY5L0t+FTWpCdXKCVsKYqaFnPJhAAAAAElFTkSuQmCC">  
+                </div>
+    
+                <div class="contact-info-content">
+                  <h4>Live on</h4>
+                  <p><a href="https://cricheroes.com">Crickheroes</a></p>
+                </div>
+              </div>
+              
+              </ul>
+          </div>
+          <div class="img-carousel col-lg-7">
+          <div class="img-card ">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <img src="./images/tournment.jpg" class="d-block w-80 mx-auto" alt="..." style="height: 400px;width: 70%;" >
+                  </div>
+                  <div class="carousel-item">
+                      <img src="./images/main.jpg" class="d-block w-80 mx-auto" alt="..." style="height: 400px;width: 70%;"  >
+                  </div>
+                  <div class="carousel-item">
+                      <img src="./images/dressingroom.jpg" class="d-block w-80 mx-auto" alt="..." style="height: 400px;width: 70%;" >
+                  </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="event-banner">
+      <div class="event-bg-card">
+        <div class="event-card col-lg-12">
+          <div class="col-lg-5">
+            <ul class="event-list">
+              <h2> Rvvk academy League</h2>
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fa-solid fa-calendar-days fa-lg" style="color: #FF8000;"></i>
+                </div>
+    
+                <div class="contact-info-content">
+                  <h4>Duration</h4>
+                  <p>25/05/2024 To 02/06/2024</p>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fa-solid fa-calendar-days fa-lg" style="color: #FF8000;"></i>
+                </div>
+    
+                <div class="contact-info-content">
+                  <h4>Format</h4>
+                  <p>T20</p>
+                </div>
+              </div>
+            
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <img class="ball-icon" style="height: 40px; width: 40px;"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwE
+                AmpwYAAAKDklEQVR4nO1da6xdRRX+KpY3vhLDw6hoJEEjUUQUsJL4IBIF34KAooIvJLVVxGg01GcINVe94XbPbDimSaPBXCwUpP
+                iKj0SpNqYFS5QIbVUoAtJS+KEttHSZNbP2vnP23Wef/bpnz7l3vuQm96x9ztprzzozs16zDhAQEBAQEBAQEBAQEBAQEBAQEBAQEB
+                AwMtA0DqIIp5DCpaRxDWmsI4UtpLGNNB4jhSfNH//PNL6mcLN5b4RLzGencVBQWRMlKLyAYnyWNG4hhcdJgxr9Kew2itRYStfiuK
+                CcMkpYjUNJ4SJS+AUp7M8M6jZncC+iCG+kVXg5XY/npfQIz6UYJ5prMS7M/az9/H5S+JnhM4lDgnKyipjCkRTjClL4d843+xO0Ci
+                +kHo5KaT0c1fd5offRMu83PJjXbP4PksbnaQ2OWPCKoRV4Jil8jjR2OoP0F9JYnh38pgqZReP72n0oef0oKSxjmRakYijGEhn8RBF
+                /oAhvLjWYbSgkoWm8hRTucOS4i2KcgYUCmsbBpDBJCgdkAO4lhbf3vWcFniHW0lb+fxCtUCGDeChsz+UR4RzSuE9mC8v2XZYV8xkU
+                4aWk8Gd5aDZVrxq0qRIrLjMgebRBCqnKwzEqvkYKTwnPjaRwPOYjKMabxPS0s0Ljta3x1vkKqc1P4XVmFlm+7NucifkE0ngvaeyV
+                B1w3aw8gLPJJIYbnJJ5FGj+V2byHYrwb8wGk8bHUp1BY6a7dvFyZtVrh1lmfU7idFG4bRitcsirwGBghYPlmfJePYuxnRqKMGF/q
+                u6ZwAilsIo2fsEMH95prDU3hyEE0QycsSunOTKvCo8RzfDVVyrjOFNkz9sgAXJm5toQUHiaFT+V+tlfe7C2lkBKm89DnUfhyunyN
+                254i1pTdwBUm+q4pvIs0HmH7f+Dne/4pRGSfTDf6cbG+xM9ITNu1fXuGvbaFYrymkEfPU4VY3+YWebY/UYzF8B3Ot+g+tlQahFR2
+                mZCKhDLyaIUKqcCjkmyr8ZzUJM7Mfu8ge8MB41hFOLkhr2NpCscMpQ1QSBUelWWzuRl2Hp+mCKfBR5hv30xs6uspfQKHzeUmSAUK
+                mUuQxrfkvpu9TH5J1JYF/KsbmpC4VTzvFDKJQ0jh73LvpfAun5GE0GO8I6VrnEkKD2T9jFI8FSLSWDWUVrRkleRRF2Ix8l7yH4px
+                OHyBSS7ZQfltn5drLarKjhStwRHpIEviKI9WuKlX4NHo2RV+LzyXwwdIhDTJ9KW+BWl8khR+U4tnz0+zN1fWCG8Tnju8SAebvLRs
+                biktxmJS+BfFOHXeK4SwKM08KlzQBs9mAnFBAgsT4RKHdjEp/Ko2z974KCRdDaxCbm+LZ/1SHRs8/B/FeLZDZ0/97Np8p3Gw4anw
+                38Riy6MVKqQCj6YQZ5FjXPua+jjNBOGiAPvNmHZorzCWVSZFWpn3dXg1KbxqKK3IyirJow2YqLWV4/K2eVcRIonrXJxxmK4ZmQzU
+                jR+Sm/exctzUjQDWrN1tQiUxjnUE20wKbxiZHCtMwK97hXBIxoaNdnfiuXNOXAbibyntehxtgnct1DaRwhfYvxlKcxWSrSQpyaMt
+                SK0ADYtmzwlMEbMdiB86tHe2YWlQjMNlKTzAsbBBtCKFVOHRFkjjBuE/+lSvVKGT+22TEppvNubdq2D2DlLICM3e9J4aV4pCrm6b
+                d5mbr5ObvyelKUyTwnkLViER3tfZxp6G2p310mTRWsgP0LgqJNlXFe5sm3eZm/9DFOJaWDvYWWwptL3fOFoSH8qjFSqkAo9WHWWr
+                kO1t8x5+8yTc7qRpzcGammnbLDiMP6vmN49WZGWV5NEWOFohCnl0LvgX39weISM30W/SmiNO/FOBQkZy/xgXOv8vFln2dqcQt+CAaS
+                OuGKcOHUOJaj/ph0Lyl6xdfMSsFf4xPkAK7x9KK16ySvFoFFTUeCzzuqMlK29T5xzIFF7cStJL42mzAa/GoYNohZt6BR615eRjchr3+
+                7KpW7M3wikObSNpnL5QzF6KcQZp/NF5fWqXZq91DJ2cOYdRKMKHO1MIjTZBJSd9b5jlGCqsbcq7ndCJxoqFFDohm2qYqUFT+GJ3oZMku
+                KjwI0fAczml25j3BA6TUPZMYDCHVqiQCjxqy6nxy76yJ4Ufdxdc5HJKe/N7MlbGE234IqTwGYpx2VBacfi9FI9a8tk64d30Azw/pSWHR
+                huW0TZPUDl5ZHMIZ4THiqm7UlIuAtyUY2Ht6sJBzW7sH3EEu4o0vr8AFPIdTjfkLOGj39AdoZbKYNyY0qbwMtJ4qGnWkDROz0aOc2lFR
+                Q4ledRcrrhE9pUpjc/C2C9n4+WwvmDX4jg5DLknUwZ0R90iOadcZ6/h21/C00crUQZUikdViPGyIX3NTW/sKeN9nMZGlyCNn8s34+N9x
+                dcNlg/yvFCOiwAzlTafFr7r4U0pKZdTtrSGk8eOoVnyNP7ZN0tnzsWcD0+KrR+UWfLWVnj2/J0hpPFrbvPkvD7bq2Jrhuk3ZWfJ71rht
+                8bP4wg8A0y3IDflwF2M7LMvgy8wD8r9puzDntsKT4WV2QrIXFrxgZ1SPErJwxs3W1aOj8UFHnLvR7w6sJOp871nlFOXRuSHSEXNZPrah
+                vLv7byed8ihz7tEKd+YTwohjQ+ZZ3PzMArflmfd5OWhzzQ/kByLblhOSQrHZ5NdubTiJasUj6GyxDiJYrwo91h0jNfDZzjdc7a6zmIlH
+                rHJTT9hqlgkUJlHK9zUK/CosZdsl2dcCd8h3vBGEfjmOoE28sDszbsu7ZqSHlobxqK1Rros2E5sLPj3xk0hZBtjPkzX4SWZ55qSz+90l
+                7CxgISn9+T1yvJZIWTDIA9lu0+kPbPs8b0lGEdwvt3pJveVio0IqK/5WA6tUCEVeJhr3CHbmrZbOGLdd41T0/YZ9vORC4wzOJ3pKGWir
+                IlIGje6ZxcH0YRuBrkuD8l03m/kc+uGbRIu6W60z837jDVkptjlS+HWtup/hymkLKSf7wk5TTDXp8vUuM+M3D1lZqPf2qb9Tg0VMotfh
+                NOcBv47x3bPGAZ2yMwZEquUp9ijH1T9QbzeZ9f5HFrhksUxtkwQMY+WaSXFpT37HNN2vKypmgXKE8bLTWZLJiBJ1t7fYdZ12XPyaEUKk
+                fX/gVk8MrS+85Ezs4LLTVeOjZ/R4rKwObV6FDaQwlkjb8avcBaXgzpybPI+HDJXkG/9UtNvSsuAaNyd5lfmUiG24drdzn25U+rl3gYKR
+                wk5rrxclqRkgEbzgy72GN4y7/IZPoDsGcALpB344J884iJn+7NGJ9b6ySO7aa+nCB/0Ju3qO2gKx5glROMmae1Kjf6YB9dOxbis81Kdc
+                Qex4xbhZGnsf7Uo6U75wZZd6c/mWcVtk34ra817OVLAHYC6Ku8MCAgICAgICAgICAgICAgICAgICAjAwsL/AdLC/x970cjqAAAAAElFT
+                kSuQmCC">
+                </div>
+    
+                <div class="contact-info-content">
+                  <h4>Ball Type</h4>
+                  <p>Leather</p>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fa-solid fa-people-group fa-2xs" style="color: #FF8000;"></i>
+                </div>
+    
+                <div class="contact-info-content">
+                  <h4>Teams</h4>
+                  <p>6</p>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <img  style="height: 40px; width: 40px;"src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABmElEQVR4nO2UTUvVURDGf1qIFFSghi7UUnGt2z6CuMjvoAa2sI1uCmbs70vpwi9QC10oSFCtAl9oKeZeLHKT4EIiqE1E0SOexuu9l3tveHF5Z3POzDNznpk5cw7UpCaXJnpKv5zXMhqrPsNolvFCszSVAjdlHMloKLJfk7MqZ1fGsKCuAsEdGX/kzBUDPXIkZyL0QRnfZNySMRbYTlqNdWV05sX2ytiT0RX6moxjGVfzCR6l4Iz2pDvvZXyWUS/DEwZ1MkblfJfxI+3/2W7L+SVjPsVOMRSJ3MsnWJbxJe2fcTMyfhxYIsj5ZnSmKs6qOfU33sj4FP6tEf/wnMB5J2c7HPoi+H4pgmQ7r+annEUZ06mKNa4kzPktJ6tMMMXQhQlOW1qGYEnOYRx4Q8ZfGU/+2yJnIw2C81bOx4RP01aqRePRlo7Qt+QcVLxk50HBJTvPy19yRncYJyPrARlfi8Z0N5d14Zh2ydhXxt2yYxpZb8RDKwC0wHUZKzI+yBmp6qHlvgrjVfFLvohohhY5L0t+FTWpCdXKCVsKYqaFnPJhAAAAAElFTkSuQmCC">  
+                </div>
+    
+                <div class="contact-info-content">
+                  <h4>Live on</h4>
+                  <p><a href="https://cricheroes.com">Crickheroes</a></p>
+                </div>
+              </div>
+              </ul>
+          </div>
+          <div class="img-carousel col-lg-7">
+            <div class="img-card">
+              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./images/tournment.jpg" class="d-block w-80 mx-auto" alt="..." style="height: 400px;width: 70%;" >
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/main.jpg" class="d-block w-80 mx-auto" alt="..." style="height: 400px;width: 70%;"  >
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/dressingroom.jpg" class="d-block w-80 mx-auto" alt="..." style="height: 400px;width: 70%;" >
+                </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="event-banner">
+      <div class="event-bg-card">
+        <div class="event-card col-lg-12">
+          <div class="col-lg-5">
+            <ul class="event-list">
+              <h2> Inter-zone Tournment</h2>
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fa-solid fa-calendar-days fa-lg" style="color: #FF8000;"></i>
+                </div>
+    
+                <div class="contact-info-content">
+                  <h4>Duration</h4>
+                  <p>25/05/2024 To 02/06/2024</p>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fa-solid fa-calendar-days fa-lg" style="color: #FF8000;"></i>
+                </div>
+    
+                <div class="contact-info-content">
+                  <h4>Format</h4>
+                  <p>3 days-Test(60 over innings)</p>
+                </div>
+              </div>
+            
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <img class="ball-icon" style="height: 40px; width: 40px;"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAKDklEQVR4nO1da6xdRRX+KpY3vhLDw6hoJEEjUUQUsJL4IBIF34KAooIvJLVVxGg01GcINVe94XbPbDimSaPBXCwUpPiKj0SpNqYFS5QIbVUoAtJS+KEttHSZNbP2vnP23Wef/bpnz7l3vuQm96x9ztprzzozs16zDhAQEBAQEBAQEBAQEBAQEBAQEBAQEBAwMtA0DqIIp5DCpaRxDWmsI4UtpLGNNB4jhSfNH//PNL6mcLN5b4RLzGencVBQWRMlKLyAYnyWNG4hhcdJgxr9Kew2itRYStfiuKCcMkpYjUNJ4SJS+AUp7M8M6jZncC+iCG+kVXg5XY/npfQIz6UYJ5prMS7M/az9/H5S+JnhM4lDgnKyipjCkRTjClL4d843+xO0Ci
+                +kHo5KaT0c1fd5offRMu83PJjXbP4PksbnaQ2OWPCKoRV4Jil8jjR2OoP0F9JYnh38pgqZReP72n0oef0oKSxjmRakYijGEhn8RBF
+                /oAhvLjWYbSgkoWm8hRTucOS4i2KcgYUCmsbBpDBJCgdkAO4lhbf3vWcFniHW0lb+fxCtUCGDeChsz+UR4RzSuE9mC8v2XZYV8xkU
+                4aWk8Gd5aDZVrxq0qRIrLjMgebRBCqnKwzEqvkYKTwnPjaRwPOYjKMabxPS0s0Ljta3x1vkKqc1P4XVmFlm+7NucifkE0ngvaeyV
+                B1w3aw8gLPJJIYbnJJ5FGj+V2byHYrwb8wGk8bHUp1BY6a7dvFyZtVrh1lmfU7idFG4bRitcsirwGBghYPlmfJePYuxnRqKMGF/q
+                u6ZwAilsIo2fsEMH95prDU3hyEE0QycsSunOTKvCo8RzfDVVyrjOFNkz9sgAXJm5toQUHiaFT+V+tlfe7C2lkBKm89DnUfhyunyN
+                254i1pTdwBUm+q4pvIs0HmH7f+Dne/4pRGSfTDf6cbG+xM9ITNu1fXuGvbaFYrymkEfPU4VY3+YWebY/UYzF8B3Ot+g+tlQahFR2
+                mZCKhDLyaIUKqcCjkmyr8ZzUJM7Mfu8ge8MB41hFOLkhr2NpCscMpQ1QSBUelWWzuRl2Hp+mCKfBR5hv30xs6uspfQKHzeUmSAUK
+                mUuQxrfkvpu9TH5J1JYF/KsbmpC4VTzvFDKJQ0jh73LvpfAun5GE0GO8I6VrnEkKD2T9jFI8FSLSWDWUVrRkleRRF2Ix8l7yH4px
+                OHyBSS7ZQfltn5drLarKjhStwRHpIEviKI9WuKlX4NHo2RV+LzyXwwdIhDTJ9KW+BWl8khR+U4tnz0+zN1fWCG8Tnju8SAebvLRs
+                biktxmJS+BfFOHXeK4SwKM08KlzQBs9mAnFBAgsT4RKHdjEp/Ko2z974KCRdDaxCbm+LZ/1SHRs8/B/FeLZDZ0/97Np8p3Gw4anw
+                38Riy6MVKqQCj6YQZ5FjXPua+jjNBOGiAPvNmHZorzCWVSZFWpn3dXg1KbxqKK3IyirJow2YqLWV4/K2eVcRIonrXJxxmK4ZmQzU
+                jR+Sm/exctzUjQDWrN1tQiUxjnUE20wKbxiZHCtMwK97hXBIxoaNdnfiuXNOXAbibyntehxtgnct1DaRwhfYvxlKcxWSrSQpyaMt
+                SK0ADYtmzwlMEbMdiB86tHe2YWlQjMNlKTzAsbBBtCKFVOHRFkjjBuE/+lSvVKGT+22TEppvNubdq2D2DlLICM3e9J4aV4pCrm6b
+                d5mbr5ObvyelKUyTwnkLViER3tfZxp6G2p310mTRWsgP0LgqJNlXFe5sm3eZm/9DFOJaWDvYWWwptL3fOFoSH8qjFSqkAo9WHWWr
+                kO1t8x5+8yTc7qRpzcGammnbLDiMP6vmN49WZGWV5NEWOFohCnl0LvgX39weISM30W/SmiNO/FOBQkZy/xgXOv8vFln2dqcQt+CAaS
+                OuGKcOHUOJaj/ph0Lyl6xdfMSsFf4xPkAK7x9KK16ySvFoFFTUeCzzuqMlK29T5xzIFF7cStJL42mzAa/GoYNohZt6BR615eRjchr3+
+                7KpW7M3wikObSNpnL5QzF6KcQZp/NF5fWqXZq91DJ2cOYdRKMKHO1MIjTZBJSd9b5jlGCqsbcq7ndCJxoqFFDohm2qYqUFT+GJ3oZMku
+                KjwI0fAczml25j3BA6TUPZMYDCHVqiQCjxqy6nxy76yJ4Ufdxdc5HJKe/N7MlbGE234IqTwGYpx2VBacfi9FI9a8tk64d30Azw/pSWHR
+                huW0TZPUDl5ZHMIZ4THiqm7UlIuAtyUY2Ht6sJBzW7sH3EEu4o0vr8AFPIdTjfkLOGj39AdoZbKYNyY0qbwMtJ4qGnWkDROz0aOc2lFR
+                Q4ledRcrrhE9pUpjc/C2C9n4+WwvmDX4jg5DLknUwZ0R90iOadcZ6/h21/C00crUQZUikdViPGyIX3NTW/sKeN9nMZGlyCNn8s34+N9x
+                dcNlg/yvFCOiwAzlTafFr7r4U0pKZdTtrSGk8eOoVnyNP7ZN0tnzsWcD0+KrR+UWfLWVnj2/J0hpPFrbvPkvD7bq2Jrhuk3ZWfJ71rht
+                8bP4wg8A0y3IDflwF2M7LMvgy8wD8r9puzDntsKT4WV2QrIXFrxgZ1SPErJwxs3W1aOj8UFHnLvR7w6sJOp871nlFOXRuSHSEXNZPrah
+                vLv7byed8ihz7tEKd+YTwohjQ+ZZ3PzMArflmfd5OWhzzQ/kByLblhOSQrHZ5NdubTiJasUj6GyxDiJYrwo91h0jNfDZzjdc7a6zmIlH
+                rHJTT9hqlgkUJlHK9zUK/CosZdsl2dcCd8h3vBGEfjmOoE28sDszbsu7ZqSHlobxqK1Rros2E5sLPj3xk0hZBtjPkzX4SWZ55qSz+90l
+                7CxgISn9+T1yvJZIWTDIA9lu0+kPbPs8b0lGEdwvt3pJveVio0IqK/5WA6tUCEVeJhr3CHbmrZbOGLdd41T0/YZ9vORC4wzOJ3pKGWir
+                IlIGje6ZxcH0YRuBrkuD8l03m/kc+uGbRIu6W60z837jDVkptjlS+HWtup/hymkLKSf7wk5TTDXp8vUuM+M3D1lZqPf2qb9Tg0VMotfh
+                NOcBv47x3bPGAZ2yMwZEquUp9ijH1T9QbzeZ9f5HFrhksUxtkwQMY+WaSXFpT37HNN2vKypmgXKE8bLTWZLJiBJ1t7fYdZ12XPyaEUKk
+                fX/gVk8MrS+85Ezs4LLTVeOjZ/R4rKwObV6FDaQwlkjb8avcBaXgzpybPI+HDJXkG/9UtNvSsuAaNyd5lfmUiG24drdzn25U+rl3gYKR
+                wk5rrxclqRkgEbzgy72GN4y7/IZPoDsGcALpB344J884iJn+7NGJ9b6ySO7aa+nCB/0Ju3qO2gKx5glROMmae1Kjf6YB9dOxbis81Kdc
+                Qex4xbhZGnsf7Uo6U75wZZd6c/mWcVtk34ra817OVLAHYC6Ku8MCAgICAgICAgICAgICAgICAgICAjAwsL/AdLC/x970cjqAAAAAElFT
+                kSuQmCC">
+                </div>
+    
+                <div class="contact-info-content">
+                  <h4>Ball Type</h4>
+                  <p>Leather</p>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fa-solid fa-people-group fa-2xs" style="color: #FF8000;"></i>
+                </div>
+    
+                <div class="contact-info-content">
+                  <h4>Teams</h4>
+                  <p>6</p>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <img  style="height: 40px; width: 40px;"src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABmElEQVR4nO2UTUvVURDGf1qIFFSghi7UUnGt2z6CuMjvoAa2sI1uCmbs70vpwi9QC10oSFCtAl9oKeZeLHKT4EIiqE1E0SOexuu9l3tveHF5Z3POzDNznpk5cw7UpCaXJnpKv5zXMhqrPsNolvFCszSVAjdlHMloKLJfk7MqZ1fGsKCuAsEdGX/kzBUDPXIkZyL0QRnfZNySMRbYTlqNdWV05sX2ytiT0RX6moxjGVfzCR6l4Iz2pDvvZXyWUS/DEwZ1MkblfJfxI+3/2W7L+SVjPsVOMRSJ3MsnWJbxJe2fcTMyfhxYIsj5ZnSmKs6qOfU33sj4FP6tEf/wnMB5J2c7HPoi+H4pgmQ7r+annEUZ06mKNa4kzPktJ6tMMMXQhQlOW1qGYEnOYRx4Q8ZfGU/+2yJnIw2C81bOx4RP01aqRePRlo7Qt+QcVLxk50HBJTvPy19yRncYJyPrARlfi8Z0N5d14Zh2ydhXxt2yYxpZb8RDKwC0wHUZKzI+yBmp6qHlvgrjVfFLvohohhY5L0t+FTWpCdXKCVsKYqaFnPJhAAAAAElFTkSuQmCC">  
+                </div>
+    
+                <div class="contact-info-content">
+                  <h4>Live on</h4>
+                  <p><a href="https://cricheroes.com">Crickheroes</a></p>
+                </div>
+              </div>
+              </ul>
+          </div>
+          <div class="img-carousel col-lg-7">
+            <div class="img-card">
+              <!-- <img class="event-img" src="./images/main.jpg"> -->
+              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./images/tournment.jpg" class="d-block w-80 mx-auto" alt="..." style="height: 400px;width: 70%;" >
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/main.jpg" class="d-block w-80 mx-auto" alt="..." style="height: 400px;width: 70%;"  >
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/dressingroom.jpg" class="d-block w-80 mx-auto" alt="..." style="height: 400px;width: 70%;" >
+                </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <hr>
+  <!-- news -->
+  <section class="news">
+    <h1>News</h1>
+    <div class="news-article">
+  <div class="news-card col-lg-12">
+    <div class="news-img">
+    <img src="./images/training1.jpg" width="400px">
+  </div>
+    <div class="news-matter">
+    <p id="short-text-1">
+      <span class="news-headlines">Sports Connects Academy Opens New State-of-the-Art Training Facility</span>
+      <br>
+      Vizag, 20/05/2024 – Sports Connects, a leading cricket academy dedicated to nurturing young talent and promoting cricket excellence, proudly announces the opening of its new state-of-the-art training facility. The grand opening event, held last Saturday, was attended by local dignitaries, former international cricketers, and enthusiastic young athletes.
+    </p>
+    <p id="long-text-1" class="hidden">
+      <span class="news-headlines">Sports Connects Academy Opens New State-of-the-Art Training Facility</span>
+      <br>
+      Vizag, 20/05/2024 – Sports Connects, a leading cricket academy dedicated to nurturing young talent and promoting cricket excellence, proudly announces the opening of its new state-of-the-art training facility. The grand opening event, held last Saturday, was attended by local dignitaries, former international cricketers, and enthusiastic young athletes.
+      The new facility features world-class amenities designed to provide the best training environment for aspiring cricketers. With multiple well-maintained pitches, advanced practice nets equipped with high-tech bowling machines, and an indoor training center, Sports Connects ensures uninterrupted training regardless of weather conditions. The facility also includes a fully equipped gymnasium focusing on cricket-specific fitness and conditioning, along with a video analysis room for detailed performance reviews and strategic planning.
+
+      "We are thrilled to open this new facility and take a significant step forward in our mission to nurture the next generation of cricket stars," said John Doe, Head Coach at Sports Connects. "Our goal is to provide top-notch training and resources to our players, helping them reach their highest potential both on and off the field."
+
+      Sports Connects has rapidly grown into a premier cricket academy, known for its comprehensive training programs and commitment to excellence. The academy's new facility is set to further enhance its reputation and attract talented cricketers from across the region.
+
+      The opening ceremony included a tour of the new facilities, a demonstration of the advanced training equipment, and an opportunity for young cricketers to interact with coaches and former international players. The event concluded with a friendly match on one of the new pitches, showcasing the academy's commitment to fostering a love for the game.
+
+      For more information about Sports Connects and its programs, visit <a href="sportsconnects.com">Sportsconnects.com</a>.
+    </p>
+    <button id="read-more-btn-1" onclick="toggleText(1)" style="padding: 10px;">Read More</button>
+  </div>
+  </div>
+  </div>
+  <div class="news-article">
+    <div class="news-card col-lg-12">
+      <div class="news-img">
+      <img src="./images/training.jpg" width="400px">
+    </div>
+      <div class="news-matter">
+      <p id="short-text-2">
+        <span class="news-headlines">"Sports Connects Academy Celebrates Record Enrollment"</span>
+        <br>
+        Vizag, 22/05/2024 – Sports Connects, the esteemed cricket academy known for its exceptional training programs and dedication to player development, 
+        is celebrating a record enrollment for the upcoming training season. 
+      </p>
+      <p id="long-text-2" class="hidden">
+        <span class="news-headlines">"Sports Connects Academy Celebrates Record Enrollment"</span>
+        <br>
+        Vizag, 22/05/2024 – Sports Connects, the esteemed cricket academy known for its exceptional training programs and dedication to player development, 
+        is celebrating a record enrollment for the upcoming training season.
+
+        The academy has seen an unprecedented increase in applications, reflecting its growing reputation as a premier destination for aspiring cricketers.
+
+"We are delighted to welcome so many new students to Sports Connects," said Jane Smith, Director of Admissions. "This surge in enrollment is a testament to the quality of our programs and the hard work of our coaching staff. We are committed to providing each player with personalized training and the resources they need to succeed."
+
+The record enrollment comes on the heels of several notable achievements by Sports Connects alumni, including selections to regional and national teams. The academy's comprehensive training programs, which include specialized coaching in batting, bowling, and fielding, as well as fitness and mental conditioning, have been instrumental in shaping well-rounded athletes.
+
+Sports Connects' holistic approach to player development extends beyond technical skills. The academy emphasizes the importance of sportsmanship, teamwork, and discipline, values that have resonated with both players and their families. The academy's supportive and competitive environment ensures that each player has the opportunity to thrive and achieve their goals.
+
+"We believe in nurturing talent and building character," said John Doe, Head Coach. "Our record enrollment is an exciting milestone, and we are more motivated than ever to help our players excel on and off the field."
+
+In response to the increased demand, Sports Connects has expanded its coaching staff and introduced new training sessions to accommodate the larger number of students. The academy remains committed to maintaining its high standards of training and ensuring that each player receives the attention and guidance they need.
+
+For more information about enrollment and training programs at Sports Connects, visit <a href="sportsconnects.com">Sportsconnects.com</a>
+
+
+
+        </p>
+      <button id="read-more-btn-2" onclick="toggleText(2)"style="padding: 10px;">Read More</button>
+    </div>
+    </div>
+    </div>
+  </section>
+<!-- news js -->
+<script>
+function toggleText(articleNumber) {
+  var shortText = document.getElementById("short-text-" + articleNumber);
+  var longText = document.getElementById("long-text-" + articleNumber);
+  var btn = document.getElementById("read-more-btn-" + articleNumber);
+
+  if (longText.classList.contains("hidden")) {
+    longText.classList.remove("hidden");
+    shortText.classList.add("hidden");
+    btn.textContent = "Read Less";
+  } else {
+    longText.classList.add("hidden");
+    shortText.classList.remove("hidden");
+    btn.textContent = "Read More";
+  }
+}
+</script>
+  <!-- footer -->
+  <div id="footer"></div>
+  <script>
+    $(function () {
+      $("#footer").load("footer.html");
+    });
+  </script>
+  <!-- footer end -->
+
+
+  <!-- bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
