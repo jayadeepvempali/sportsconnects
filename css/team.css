@@ -1,0 +1,272 @@
+.team-cover {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0px 60px 0px;
+    background-color: rgb(205, 226, 226);
+  }
+
+  /* .team-cover:hover {
+    border-top-left-radius: 27%;
+    border-bottom-right-radius: 27%;
+    transition: 1s;
+  } */
+
+  .team-tabs {
+    width: 80%;
+  }
+
+  .team-tabs:hover {
+    border-top-right-radius: 20%;
+  }
+
+  .tablink:hover {
+    background-color: #f5ecec;
+    color: black;
+    border-top-right-radius: 50px;
+    transition: 1s;
+  }
+
+  .tablink::before {
+    border-top-left-radius: 30px;
+  }
+
+  .tablink::after {
+    border-top-right-radius: 30px;
+  }
+
+  .tablink {
+    background-color: #f5ecec;
+    color: black;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+  }
+
+  /* Style the tab content (and add height:100% for full page content) */
+  .tabcontent {
+    color: rgb(0, 0, 0);
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+    border-radius: 50px;
+  }
+
+  #Founders {
+    background-color: white;
+  }
+
+  #Batting {
+    background-color: white;
+  }
+
+  #Bowling {
+    background-color: white;
+  }
+
+  #Fielding {
+    background-color: white;
+  }
+
+
+  /*review*/
+
+  .review {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+  }
+
+  /* .card-img-top {
+    height: 220px;
+    width: 100%;
+  } */
+
+  .card-body {
+    color: black;
+  }
+
+  @media screen and (max-width: 400px) {
+    /* .team-cover:hover {
+        border-top-left-radius: 27%;
+        border-bottom-right-radius: 27%;
+        transition: 1s;
+      } */
+    
+    .review {
+      display: flex;
+      row-gap: 20px;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+    }
+    div.card{
+        width: 100%;
+        height: 300px;
+    }
+
+    .card-img-top {
+      height: 200px;
+      width: 100%;
+    }
+    .team-tabs {
+        width: 80%;
+      }
+    
+      .team-tabs:hover {
+        border-top-right-radius: 20%;
+      }
+    button.tablink{
+        font-size: 15px;
+    padding: 3px;
+    width: 100%;
+    }
+     .tablink:hover {
+        background-color: #f5ecec;
+        color: black;
+        border-top-right-radius: 10px;
+        transition: 1s;
+      }
+  }
+
+  @media screen and (min-width: 401px) and (max-width: 720px) {
+    .review {
+      display: flex;
+      row-gap: 20px;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+      column-gap: 10px;
+    }
+    div.card{
+        width: 100%;
+        
+    }
+    .card-img-top {
+      height: 300px;
+      width: 100%;
+    }
+    button.tablink{
+        
+    padding: 3px;
+    width: 100%;
+    }
+
+  }
+
+  @media screen and (min-width: 721px) and (max-width: 1280px) {
+    .review {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 20px;
+      column-gap: 10px;
+    }
+    div.card{
+        width: 100%;
+        height: 400px;
+    }
+
+    .card-img-top {
+      height: 300px;
+      width: 100%;
+    }
+    .tablink:hover {
+        background-color: #f5ecec;
+        color: black;
+        border-top-right-radius: 10px;
+        transition: 1s;
+      }
+      .team-tabs {
+        width: 80%;
+      }
+    
+      .team-tabs:hover {
+        border-top-right-radius: 20%;
+      }
+      .team-cover:hover {
+        border-top-left-radius: 27%;
+        border-bottom-right-radius: 27%;
+        transition: 1s;
+      } 
+  }
+
+  @media screen and (min-width: 1281px) and (max-width: 1440px) {
+    /* nav{
+        font-size: 18px;
+    } */
+    .review {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 20px;
+      column-gap: 20px;
+    }
+    div.card{
+        width: 100%; 
+    }
+    /* button.tablink{
+        font-size: 24px;
+    } */
+
+
+    .card-img-top {
+      height: 300px;
+      width: 100%;
+    }
+    .tablink:hover {
+        background-color: #f5ecec;
+        color: black;
+        border-top-right-radius: 50px;
+        transition: 1s;
+      }
+      .team-tabs {
+        width: 80%;
+        /* font-size: 22px; */
+      }
+    
+      .team-tabs:hover {
+        border-top-right-radius: 20%;
+      }
+      .team-cover:hover {
+        border-top-left-radius: 27%;
+        border-bottom-right-radius: 27%;
+        transition: 1s;
+      } 
+  }
+
+  @media screen and (min-width: 1441px) and (max-width: 1920px) {
+    .review {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .card-img-top {
+      height: 220px;
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 1921px) {
+    .review {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .card-img-top {
+      height: 220px;
+      width: 100%;
+    }
+  }
+
+  .par {
+    font-size: 25px;
+  }
