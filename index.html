@@ -270,10 +270,111 @@
 
   </section>
   <!-- footer -->
-  <div id="footer"></div>
+   <footer class="footer-section">
+    <div class="container">
+      <div class="footer-content pt-5 pb-5">
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 mb-50">
+            <div class="footer-widget">
+              <div class="footer-logo">
+                <a href="index.html"><img src="./images/Sports Connects.png"></a>
+              </div>
+              <div class="footer-text">
+                <p>Unlock Your Cricket Potential with top-tier training programs and world-class grounds.
+                  Join us to elevate your game and experience the best in cricket coaching and facilities.</p>
+              </div>
+              <div class="footer-social-icon">
+                <span>Follow us</span>
+                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                <a href="#"><i class="fa-brands fa-square-instagram fa-2xl" style="color: #ee2fd5;"></i></a>
+                <a href="#"><i class="fa-brands fa-square-whatsapp fa-2xl" style="color: #38e515;"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+            <div class="footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Useful Links</h3>
+              </div>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+            <div class="footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Address</h3>
+              </div>
+              <div class="footer-text mb-25">
+                <div class="feature-box d-flex p-2 align-items-center mb-0">
+
+                  <i class="fa-solid fa-location-dot fa-lg" style="color: #ff7b00;"></i>
+                  <h6 class="">Sports Connects,Vizag.</h6>
+                </div>
+                <div class="feature-box d-flex p-2 align-items-center mb-0">
+                  <!-- <i class="far fa-bell "></i> -->
+                  <i class="fa-solid fa-envelope fa-lg" style="color: #ff7b00;"></i>
+                  <h6 class="">sportsconnects@gmail.com</h6>
+                </div>
+                <div class="feature-box d-flex p-2 align-items-center mb-0">
+                  <!-- <i class="far fa-bell "></i> -->
+                  <i class="fa-solid fa-phone fa-lg" style="color: #ff7b00;"></i>
+                  <h6 class="">+91 8563201479</h6>
+                </div>
+                <div class="feature-box d-flex p-2 align-items-center mb-0">
+                  <!-- <i class="far fa-bell "></i> -->
+                  <i class="fa-solid fa-clock fa-lg" style="color: #ff7b00;"></i>
+                  <h6 class="">Tuesday - Sunday,6AM - 8PM</h6>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+            <div class="copyright-text">
+              <p>Copyright &copy; 2024, designed by jayadeep</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- to top script -->
+  <div class="to-top">
+    <a href="" class="alink"><i class="fa-solid fa-angle-up fa-xl"></i></a>
+  </div>
+  <script src="path-to-your-jquery/jquery.min.js"></script>
   <script>
-    $(function () {
-      $("#footer").load("footer.html");
+    $(document).ready(function () {
+      // Show/hide back-to-top button based on scroll position
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          $('.to-top').fadeIn('slow');
+        } else {
+          $('.to-top').fadeOut('slow');
+        }
+      });
+
+      // Scroll to top when back-to-top button is clicked
+      $('.alink').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
+        return false;
+      });
     });
   </script>
 
