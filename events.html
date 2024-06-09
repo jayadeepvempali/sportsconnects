@@ -22,732 +22,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-
-  <style>
-    .event-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 0px 50px;
-      row-gap:20px;
-    }
-
-    .event-banner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: #90b2ed40;
-      width: 100%;
-    }
-
-    .event-bg-card {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      padding: 50px 0px;
-      width: 100%;
-    }
-    .img-carousel{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .carousel-control-next-icon{
-      background-color: blue;
-    }
-    .carousel-control-prev-icon{
-      background-color: blue;
-    }
-
-    .event-card {
-      display: flex;
-      flex-direction: row;
-
-    }
-    .contact-info-item {
-      display: flex;
-      
-    }
-    .contact-info-icon {
-      display: flex;
-    height: 40px;
-    width: 40px;
-    background-color: #040404;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-    border-radius: 50%;
-    }
-
-    .contact-info-icon i {
-      font-size: 20px;
-      line-height: 70px;
-    }
-
-    .event-list {
-      display: flex;
-      flex-direction: column;
-      padding: 20px;
-     
-    }
-    
-    .img-card{
-      display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-    img.carousel-image{
-      height: 300px;
-      width: 100%;
-    }
-    .carousel-inner {
-    position: relative;
-    width: 100%;
-    padding: 20px;
-    overflow: hidden;
-}
-    /* news */
-    .news{
-      margin: 0px 50px;
-      display: flex;
-        flex-direction: column;
-    }
-    .news-article{
-      display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0px;
-    }
-    .news-card{
-      display: flex;
-      column-gap: 10px;
-    }
-    .news-headlines{
-      font-size: 24px;
-      font-weight: bold;
-    }
-    .news-img{
-      display: flex;
-    width: 100%;
-    }
-    .news-image{
-      width: 100%;
-    }
-    .hidden {
-  display: none;
-}
-
-    /* media queries */
-    @media screen and (max-width: 400px) {
-    .event-section {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin: 0px 50px;
-          row-gap:20px;
-        }
-    
-        .event-banner {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          background-color: #90b2ed40;
-          width: 100%;
-        }
-    
-        .event-bg-card {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          padding: 10px 0px;
-          width: 100%;
-        }
-        .img-carousel{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-    
-        .event-card {
-          display: flex;
-          flex-direction: column;
-    
-        }
-        .contact-info-item {
-          display: flex;
-          
-        }
-        .contact-info-icon {
-          display: flex;
-        height: 40px;
-        width: 40px;
-        background-color: #040404;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        margin-right: 10px;
-        border-radius: 50%;
-        }
-    
-        .contact-info-icon i {
-          font-size: 20px;
-          line-height: 70px;
-        }
-    
-        .event-list {
-          display: flex;
-          flex-direction: column;
-          padding: 20px;
-         
-        }
-        .img-card{
-          display: flex;
-        justify-content: center;
-        align-items: center;
-        }
-}
-
-@media screen and (min-width: 401px) and (max-width: 720px) {
-    .event-section {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin: 0px 50px;
-          row-gap:20px;
-        }
-    
-        .event-banner {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          background-color: #90b2ed40;
-          width: 100%;
-        }
-    
-        .event-bg-card {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          padding: 10px 0px;
-          width: 100%;
-        }
-        .img-carousel{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-    
-        .event-card {
-          display: flex;
-          flex-direction: column;
-    
-        }
-        .contact-info-item {
-          display: flex;
-          
-        }
-        .contact-info-icon {
-          display: flex;
-        height: 40px;
-        width: 40px;
-        background-color: #040404;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        margin-right: 10px;
-        border-radius: 50%;
-        }
-    
-        .contact-info-icon i {
-          font-size: 20px;
-          line-height: 70px;
-        }
-    
-        .event-list {
-          display: flex;
-          flex-direction: column;
-          padding: 20px;
-         
-        }
-    
-        .img-card{
-          display: flex;
-        justify-content: center;
-        align-items: center;
-        }
-}
-
-@media screen and (min-width: 721px) and (max-width: 1280px) {
-    .event-section {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin: 0px 50px;
-          row-gap:20px;
-        }
-    
-        .event-banner {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          background-color: #90b2ed40;
-          width: 100%;
-        }
-    
-        .event-bg-card {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          padding: 10px 0px;
-          width: 100%;
-        }
-        .img-carousel{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-    
-        .event-card {
-          display: flex;
-          flex-direction: row;
-    
-        }
-        .contact-info-item {
-          display: flex;
-          
-        }
-        .contact-info-icon {
-          display: flex;
-        height: 40px;
-        width: 40px;
-        background-color: #040404;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        margin-right: 10px;
-        border-radius: 50%;
-        }
-    
-        .contact-info-icon i {
-          font-size: 20px;
-          line-height: 70px;
-        }
-    
-        .event-list {
-          display: flex;
-          flex-direction: column;
-          padding: 20px;
-         
-        }
-        .img-card{
-          display: flex;
-        justify-content: center;
-        align-items: center;
-        }
-}
-
-@media screen and (min-width: 1281px) and (max-width: 1440px) {
-    .event-section {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin: 0px 50px;
-          row-gap:20px;
-        }
-    
-        .event-banner {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          background-color: #90b2ed40;
-          width: 100%;
-        }
-    
-        .event-bg-card {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          padding: 50px 0px;
-          width: 100%;
-        }
-        .img-carousel{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-    
-        .event-card {
-          display: flex;
-          flex-direction: row;
-    
-        }
-        .contact-info-item {
-          display: flex;
-          
-        }
-        .contact-info-icon {
-          display: flex;
-        height: 40px;
-        width: 40px;
-        background-color: #040404;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        margin-right: 10px;
-        border-radius: 50%;
-        }
-    
-        .contact-info-icon i {
-          font-size: 20px;
-          line-height: 70px;
-        }
-    
-        .event-list {
-          display: flex;
-          flex-direction: column;
-          padding: 20px;
-         
-        }
-    
-        .img-card{
-          display: flex;
-        justify-content: center;
-        align-items: center;
-        }
-}
-
-@media screen and (min-width: 1441px) and (max-width: 1920px) {
-    .event-section {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin: 0px 50px;
-          row-gap:20px;
-        }
-    
-        .event-banner {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          background-color: #90b2ed40;
-          width: 100%;
-        }
-    
-        .event-bg-card {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          padding: 50px 0px;
-          width: 100%;
-        }
-        .img-carousel{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-    
-        .event-card {
-          display: flex;
-          flex-direction: row;
-    
-        }
-        .contact-info-item {
-          display: flex;
-          
-        }
-        .contact-info-icon {
-          display: flex;
-        height: 40px;
-        width: 40px;
-        background-color: #040404;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        margin-right: 10px;
-        border-radius: 50%;
-        }
-    
-        .contact-info-icon i {
-          font-size: 20px;
-          line-height: 70px;
-        }
-    
-        .event-list {
-          display: flex;
-          flex-direction: column;
-          padding: 20px;
-         
-        }
-        .img-card{
-          display: flex;
-        justify-content: center;
-        align-items: center;
-        }
-}
-
-@media screen and (min-width: 1921px) {
-  
-    .event-section {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin: 0px 100px;
-          row-gap:40px;
-        }
-    
-        .event-banner {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          background-color: #90b2ed40;
-          width: 100%;
-        }
-    
-        .event-bg-card {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          padding: 50px 0px;
-          width: 100%;
-        }
-        .img-carousel{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-    
-        .event-card {
-          display: flex;
-          flex-direction: row;
-    
-        }
-        .contact-info-item {
-          display: flex;
-          
-        }
-        .contact-info-icon {
-          display: flex;
-        height: 80px;
-        width: 80px;
-        background-color: #040404;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        margin-right: 20px;
-        border-radius: 50%;
-        }
-        .i{
-          color: #FF8000;
-          font-size: 40px;
-        }
-    
-        .contact-info-icon i {
-          font-size: 40px;
-          line-height: 70px;
-        }
-    
-        .event-list {
-          display: flex;
-          flex-direction: column;
-          padding: 20px;
-         
-        }
-        .img-card{
-          display: flex;
-        justify-content: center;
-        align-items: center;
-        }
-}
-/* carousel images media queries */
-@media screen and (max-width: 400px) {
-    img.carousel-image{
-          height: 150px;
-          width: 100%;
-        }
-}
-
-@media screen and (min-width: 401px) and (max-width: 720px) {
-    img.carousel-image{
-          height: 200px;
-          width: 100%;
-        }
-}
-
-@media screen and (min-width: 721px) and (max-width: 1280px) {
-    img.carousel-image{
-          height: 300px;
-          width: 100%;
-        }
-}
-
-@media screen and (min-width: 1281px) and (max-width: 1440px) {
-  
-    img.carousel-image{
-          height: 300px;
-          width: 100%;
-        }
-}
-
-@media screen and (min-width: 1441px) and (max-width: 1920px) {
-  /* p{
-    font-size: 24px;
-  } */
-    img.carousel-image{
-          height: 400px;
-          width: 100%;
-        }
-}
-
-@media screen and (min-width: 1921px) {
-  h1{
-    font-size: 80px;
-  }
-  h4{
-    font-size: 60px;
-  }
-    img.carousel-image{
-          height: 400px;
-          width: 100%;
-        }
-}
-/* news media queries */
-@media screen and (max-width: 400px) {
-    .news{
-          margin: 0px 50px;
-        }
-        .news-article{
-          display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 0px;
-        }
-        .news-card{
-          display: flex;
-          column-gap: 10px;
-          flex-direction: column;
-        }
-        .news-headlines{
-          font-size: 24px;
-          font-weight: bold;
-        }
-        
-}
-
-@media screen and (min-width: 401px) and (max-width: 720px) {
-    .news{
-          margin: 0px 50px;
-        }
-        .news-article{
-          display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 0px;
-        }
-        .news-card{
-          display: flex;
-          column-gap: 10px;
-          flex-direction: column;
-        }
-        .news-headlines{
-          font-size: 24px;
-          font-weight: bold;
-        }
-        
-}
-
-@media screen and (min-width: 721px) and (max-width: 1280px) {
-    .news{
-          margin: 0px 50px;
-        }
-        .news-article{
-          display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 0px;
-        }
-        .news-card{
-          display: flex;
-          column-gap: 10px;
-        }
-        .news-headlines{
-          font-size: 24px;
-          font-weight: bold;
-        }
-        
-}
-
-@media screen and (min-width: 1281px) and (max-width: 1440px) {
- 
-  .news-img {
-    display: flex;
-    width: 500px;
-}
-    .news{
-          margin: 0px 50px;
-        }
-        .news-article{
-          display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 0px;
-        }
-        .news-card{
-          display: flex;
-          column-gap: 40px;
-        }
-        .news-headlines{
-          font-size: 34px;
-          font-weight: bold;
-        }
-        
-}
-
-@media screen and (min-width: 1441px) and (max-width: 1920px) {
-    .news{
-          margin: 0px 50px;
-        }
-        .news-article{
-          display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 0px;
-        }
-        .news-card{
-          display: flex;
-          column-gap: 10px;
-        }
-        .news-headlines{
-          font-size: 24px;
-          font-weight: bold;
-        }
-        
-}
-
-@media screen and (min-width: 1921px) {
-  p{
-    font-size: 40px;
-  }
-    .news{
-          margin: 0px 100px;
-        }
-        .news-article{
-          display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 0px;
-        }
-        .news-card{
-          display: flex;
-          column-gap: 80px;
-        }
-        .news-headlines{
-          font-size: 60px;
-          font-weight: bold;
-        }
-        
-}
-  </style>
 </head>
 
 <body>
@@ -1181,11 +455,7 @@
 
       "We are thrilled to open this new facility and take a significant step forward in our mission to nurture the next generation of cricket stars," said John Doe, Head Coach at Sports Connects. "Our goal is to provide top-notch training and resources to our players, helping them reach their highest potential both on and off the field."
 
-      Sports Connects has rapidly grown into a premier cricket academy, known for its comprehensive training programs and commitment to excellence. The academy's new facility is set to further enhance its reputation and attract talented cricketers from across the region.
-
-      The opening ceremony included a tour of the new facilities, a demonstration of the advanced training equipment, and an opportunity for young cricketers to interact with coaches and former international players. The event concluded with a friendly match on one of the new pitches, showcasing the academy's commitment to fostering a love for the game.
-
-      For more information about Sports Connects and its programs, visit <a href="sportsconnects.com">Sportsconnects.com</a>.
+      Sports Connects has rapidly grown into a premier cricket academy,visit <a href="sportsconnects.com">Sportsconnects.com</a>.
     </p>
     <button id="read-more-btn-1" onclick="toggleText(1)" style="padding: 10px;">Read More</button>
   </div>
@@ -1217,11 +487,7 @@ The record enrollment comes on the heels of several notable achievements by Spor
 
 Sports Connects' holistic approach to player development extends beyond technical skills. The academy emphasizes the importance of sportsmanship, teamwork, and discipline, values that have resonated with both players and their families. The academy's supportive and competitive environment ensures that each player has the opportunity to thrive and achieve their goals.
 
-"We believe in nurturing talent and building character," said John Doe, Head Coach. "Our record enrollment is an exciting milestone, and we are more motivated than ever to help our players excel on and off the field."
-
-In response to the increased demand, Sports Connects has expanded its coaching staff and introduced new training sessions to accommodate the larger number of students. The academy remains committed to maintaining its high standards of training and ensuring that each player receives the attention and guidance they need.
-
-For more information about enrollment and training programs at Sports Connects, visit <a href="sportsconnects.com">Sportsconnects.com</a>
+"We believe in nurturing talent and building character," said John Doe, Head Coach. visit <a href="sportsconnects.com">Sportsconnects.com</a>
 
 
 
@@ -1250,12 +516,114 @@ function toggleText(articleNumber) {
 }
 </script>
   <!-- footer -->
-  <div id="footer"></div>
+   <footer class="footer-section">
+    <div class="container">
+      <div class="footer-content pt-5 pb-5">
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 mb-50">
+            <div class="footer-widget">
+              <div class="footer-logo">
+                <a href="index.html"><img src="./images/Sports Connects.png"></a>
+              </div>
+              <div class="footer-text">
+                <p>Unlock Your Cricket Potential with top-tier training programs and world-class grounds.
+                  Join us to elevate your game and experience the best in cricket coaching and facilities.</p>
+              </div>
+              <div class="footer-social-icon">
+                <span>Follow us</span>
+                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                <a href="#"><i class="fa-brands fa-square-instagram fa-2xl" style="color: #ee2fd5;"></i></a>
+                <a href="#"><i class="fa-brands fa-square-whatsapp fa-2xl" style="color: #38e515;"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+            <div class="footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Useful Links</h3>
+              </div>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+            <div class="footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Address</h3>
+              </div>
+              <div class="footer-text mb-25">
+                <div class="feature-box d-flex p-2 align-items-center mb-0">
+
+                  <i class="fa-solid fa-location-dot fa-lg" style="color: #ff7b00;"></i>
+                  <h6 class="">Sports Connects,Vizag.</h6>
+                </div>
+                <div class="feature-box d-flex p-2 align-items-center mb-0">
+                  <!-- <i class="far fa-bell "></i> -->
+                  <i class="fa-solid fa-envelope fa-lg" style="color: #ff7b00;"></i>
+                  <h6 class="">sportsconnects@gmail.com</h6>
+                </div>
+                <div class="feature-box d-flex p-2 align-items-center mb-0">
+                  <!-- <i class="far fa-bell "></i> -->
+                  <i class="fa-solid fa-phone fa-lg" style="color: #ff7b00;"></i>
+                  <h6 class="">+91 8563201479</h6>
+                </div>
+                <div class="feature-box d-flex p-2 align-items-center mb-0">
+                  <!-- <i class="far fa-bell "></i> -->
+                  <i class="fa-solid fa-clock fa-lg" style="color: #ff7b00;"></i>
+                  <h6 class="">Tuesday - Sunday,6AM - 8PM</h6>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+            <div class="copyright-text">
+              <p>Copyright &copy; 2024, designed by jayadeep</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- to top script -->
+  <div class="to-top">
+    <a href="" class="alink"><i class="fa-solid fa-angle-up fa-xl"></i></a>
+  </div>
+  <script src="path-to-your-jquery/jquery.min.js"></script>
   <script>
-    $(function () {
-      $("#footer").load("footer.html");
+    $(document).ready(function () {
+      // Show/hide back-to-top button based on scroll position
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          $('.to-top').fadeIn('slow');
+        } else {
+          $('.to-top').fadeOut('slow');
+        }
+      });
+
+      // Scroll to top when back-to-top button is clicked
+      $('.alink').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
+        return false;
+      });
     });
   </script>
+
   <!-- footer end -->
 
 
