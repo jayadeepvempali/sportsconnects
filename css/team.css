@@ -70,7 +70,7 @@
 
   .review {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
     padding: 20px;
   }
@@ -78,10 +78,27 @@
     color: black;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
   }
 
   @media screen and (max-width: 400px) {
+    #f-review {
+      display: flex;
+      row-gap: 20px;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+    }
+    #f-card{
+        width: 100%;
+    }
+    #card-img-top {
+      height: 200px;
+      width: 100%;
+    }
+    #hide{
+      display: none;
+    }
     .review {
       display: flex;
       row-gap: 20px;
@@ -117,7 +134,7 @@
   }
 
   @media screen and (min-width: 401px) and (max-width: 720px) {
-    .review {
+    #f-review {
       display: flex;
       row-gap: 20px;
       align-items: center;
@@ -125,11 +142,30 @@
       padding: 20px;
       column-gap: 10px;
     }
+    #f-card{
+        width: 100%;  
+        border: 1px solid #e5dada; 
+    }
+    #card-img-top {
+      height: 300px;
+      width: 100%;
+    }
+    #hide{
+      display: none;
+    }
+    .review {
+      display: flex;
+      row-gap: 20px;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+    }
     div.card{
-        width: 100%;   
+      column-gap: 20px;
+        width: 100%;
     }
     .card-img-top {
-      height: 300px;
+      height: 200px;
       width: 100%;
     }
     button.tablink{    
@@ -140,21 +176,36 @@
   }
 
   @media screen and (min-width: 721px) and (max-width: 1280px) {
-    .review {
+    #f-review {
       display: flex;
-      align-items: center;
+      align-items:flex-start;
       justify-content: space-around;
       padding: 20px;
-      column-gap: 10px;
+      flex-direction: column;
+      row-gap:20px;
     }
-    div.card{
-        width: 100%;
-        /* height: 300px; */
+    #f-card{
+      column-gap: 20px;
+        display: flex;
+        flex-direction: row;
+        border: 1px solid #e5dada;
     }
 
-    .card-img-top {
-      height: 200px;
-      width: 100%;
+    img#card-img-top {
+      width: 30%;
+      height: 300px;
+    }
+    .review {
+      display: flex;
+      align-items:flex-start;
+      justify-content: space-around;
+      padding: 20px;
+      row-gap:20px;
+    }
+    div.card{
+        
+        display: flex;
+        flex-direction: column;
     }
     .card-img-top:hover{
       transform: scale(1.08);
@@ -181,27 +232,34 @@
   }
 
   @media screen and (min-width: 1281px) and (max-width: 1440px) {
-    /* nav{
-        font-size: 18px;
-    } */
-    .review {
+    #f-review {
       display: flex;
-      align-items: center;
+      align-items:flex-start;
       justify-content: space-around;
       padding: 20px;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+    #f-card{
       column-gap: 20px;
+        display: flex;
+        flex-direction: row;
+        border: 1px solid #e5dada;
+    }
+
+    img#card-img-top {
+      width: 30%;
+    }
+    .review {
+      display: flex;
+      align-items:flex-start;
+      justify-content: space-around;
+      padding: 20px;
+      row-gap:20px;
     }
     div.card{
-        width: 100%; 
-    }
-    /* button.tablink{
-        font-size: 24px;
-    } */
-
-
-    .card-img-top {
-      height: 300px;
-      width: 100%;
+        display: flex;
+        flex-direction: column;
     }
     .tablink:hover {
         background-color: #f5ecec;
@@ -211,7 +269,6 @@
       }
       .team-tabs {
         width: 80%;
-        /* font-size: 22px; */
       }
     
       .team-tabs:hover {
@@ -225,33 +282,71 @@
   }
 
   @media screen and (min-width: 1441px) and (max-width: 1920px) {
-    .review {
+      #f-review {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-around;
       padding: 20px;
+      flex-direction: column;
+      row-gap:20px;
     }
+    #f-card{
+      display: flex;
+      flex-direction: row;
+      column-gap: 20px;
+      border: 1px solid #e5dada;
+  }
 
-    .card-img-top {
-      height: 220px;
-      width: 100%;
+    img#card-img-top {
+      width: 30%;
+    }
+    .review {
+      display: flex;
+      align-items:flex-start;
+      justify-content: space-around;
+      padding: 20px;
+      row-gap:20px;
+    }
+    div.card{
+        
+        display: flex;
+        flex-direction: column;
     }
   }
 
   @media screen and (min-width: 1921px) {
-    .review {
+    #f-review {
       display: flex;
-      align-items: center;
+      align-items:flex-start;
       justify-content: space-around;
       padding: 20px;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+    #f-card{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #e5dada;
     }
 
-    .card-img-top {
-      height: 220px;
-      width: 100%;
+    img.card-img-top {
+        height: 220px;
+        width: 100%;
+    }
+    .review {
+      display: flex;
+      align-items:flex-start;
+      justify-content: space-around;
+      padding: 20px;
+      row-gap:20px;
+    }
+    div.card{
+        
+        display: flex;
+        flex-direction: column;
     }
   }
 
   .par {
-    font-size: 25px;
+    font-size: 30px;
   }
